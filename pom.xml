@@ -17,7 +17,7 @@
 		<module>microcloud-provider-product</module>
 		<module>microcloud-security</module>
 		<module>microcloud-consumer</module>
-		<module>microcloud-eureka</module>
+		<module>microcloud-eureka1</module>
 	</modules>
 
 	<dependencyManagement>
