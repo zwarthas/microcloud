@@ -18,6 +18,8 @@
 		<module>microcloud-security</module>
 		<module>microcloud-consumer</module>
 		<module>microcloud-eureka1</module>
+		<module>microcloud-eureka2</module>
+		<module>microcloud-eureka3</module>
 	</modules>
 
 	<dependencyManagement>
