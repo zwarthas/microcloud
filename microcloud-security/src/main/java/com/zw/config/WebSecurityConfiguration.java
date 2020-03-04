@@ -14,13 +14,14 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder()).withUser("root")
-				.password(new BCryptPasswordEncoder().encode("enjoy")).roles("USER").and().withUser("admin")
-				.password(new BCryptPasswordEncoder().encode("enjoy")).roles("USER", "ADMIN");
+				.password(new BCryptPasswordEncoder().encode("123456")).roles("USER").and().withUser("admin")
+				.password(new BCryptPasswordEncoder().encode("123456")).roles("USER", "ADMIN");
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
+		http.csrf().disable();
 		http.httpBasic().and().authorizeRequests().anyRequest().fullyAuthenticated();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}

@@ -21,10 +21,12 @@ public class ProductController {
     public Object get(@PathVariable("id") long id) {
         return this.productService.get(id) ;
     }
+	
     @RequestMapping(value="/add")
     public Object add(@RequestBody Product product) {
         return this.productService.add(product) ;
     }
+    
     @RequestMapping(value="/list")
     public Object list() {
         return this.productService.list() ;

@@ -19,8 +19,8 @@ public class RestConfig {
 	@Bean
 	public HttpHeaders httpHeaders() {
 		HttpHeaders headers = new HttpHeaders(); // 定义一个HTTP的头信息
-		String auth = "admin:enjoy"; // 认证的原始信息
-		byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(Charset.forName("US-ASCII"))); // 进行一个加密的处理
+		String auth = "admin:123456"; // 认证的原始信息
+		byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(Charset.forName("US-ASCII"))); // 进行一个加密的处理"US-ASCII"
 		String authHeader = "Basic " + new String(encodedAuth);
 		headers.set("Authorization", authHeader);
 		return headers;
