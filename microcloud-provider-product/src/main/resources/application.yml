@@ -7,7 +7,6 @@ spring:
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类
-    
 server:
   port: 8080
   
