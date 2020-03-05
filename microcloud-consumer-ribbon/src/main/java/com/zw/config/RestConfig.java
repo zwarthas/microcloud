@@ -16,7 +16,7 @@ import com.netflix.loadbalancer.RandomRule;
 public class RestConfig {
 
 	@Bean
-	@LoadBalanced
+	//@LoadBalanced
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}

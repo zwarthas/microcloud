@@ -10,7 +10,7 @@ spring:
 #      password: 123456
 #      roles:#      - USER
 server:
-  port: 8083
+  port: 8082
 mybatis:
   mapper-locations:
   - classpath:mapping/*.xml

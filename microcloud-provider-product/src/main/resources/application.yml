@@ -19,7 +19,9 @@ logging:
   level:
     com.zw.mapper: debug
     
-eureka:  client:    service-url:      defaultZone: http://admin:123456@eureka1:7001/eureka #,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
+eureka:  client:
+#    fetch-registry: false
+#    register-with-eureka: false    service-url:      defaultZone: http://admin:123456@eureka1:7001/eureka #,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
   instance:    instance-id: microcloud-provider-product-instance1
     prefer-ip-address: true
     
@@ -29,7 +31,3 @@ info:
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   build.parent: $project.parent.artifactId$
-  
-person:  
-  age: 19
-  name: ahu 
