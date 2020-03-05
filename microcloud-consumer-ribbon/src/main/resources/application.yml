@@ -1,0 +1,6 @@
+server:
+  port: 8090
+  
+#eureka
+eureka:  client:    register-with-eureka: false
+    service-url:      defaultZone: http://admin:123456@127.0.0.1:7001/eureka

@@ -22,6 +22,7 @@
 		<module>microcloud-eureka1</module>
 		<module>microcloud-eureka2</module>
 		<module>microcloud-eureka3</module>
+		<module>microcloud-consumer-ribbon</module>
 	</modules>
 
 	<dependencyManagement>
