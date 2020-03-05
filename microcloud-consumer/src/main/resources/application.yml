@@ -1,2 +1,6 @@
 server:
   port: 8081
+  
+#eureka
+eureka:  client:    register-with-eureka: false
+    service-url:      defaultZone: localhost:7001/eureka
