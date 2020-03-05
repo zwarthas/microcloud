@@ -1,8 +1,8 @@
 spring:
   application:
-    name: microcloud-provider-product2
+    name: microcloud-provider-product
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/springcloud2?characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
@@ -20,7 +20,7 @@ logging:
     com.zw.mapper: debug
     
 eureka:  client:    service-url:      defaultZone: http://admin:123456@eureka1:7001/eureka #,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
-  instance:    instance-id: microcloud-provider-product
+  instance:    instance-id: microcloud-provider-product-instance2
     prefer-ip-address: true
     
 info:

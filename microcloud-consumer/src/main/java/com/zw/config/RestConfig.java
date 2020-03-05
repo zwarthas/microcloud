@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
+
 @Configuration
 public class RestConfig {
 
@@ -27,5 +30,10 @@ public class RestConfig {
 		headers.set("Authorization", authHeader);
 		return headers;
 	}
+	
+//	@Bean
+//	public IRule ribbonRule() {
+//		return new RandomRule();
+//	}
 
 }
