@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microcloud-provider-product
+    name: microcloud-provider-product3
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
@@ -10,7 +10,7 @@ spring:
 #      password: 123456
 #      roles:#      - USER
 server:
-  port: 8080
+  port: 8083
 mybatis:
   mapper-locations:
   - classpath:mapping/*.xml
@@ -24,7 +24,7 @@ eureka:  client:    service-url:      defaultZone: http://admin:123456@eureka
     prefer-ip-address: true
     
 info:
-  app.name: microcloud-provider-product
+  app.name: microcloud-provider-product3
   compane.name: com
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
