@@ -15,6 +15,8 @@
 	<modules>
 		<module>microcloud-api</module>
 		<module>microcloud-provider-product</module>
+		<module>microcloud-provider-product2</module>
+		<module>microcloud-provider-product3</module>
 		<module>microcloud-security</module>
 		<module>microcloud-consumer</module>
 		<module>microcloud-eureka1</module>

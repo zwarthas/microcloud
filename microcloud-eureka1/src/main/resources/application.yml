@@ -6,7 +6,7 @@ eureka:  instance:
   client:
     fetch-registry: false
     register-with-eureka: false
-    service-url:      defaultZone: http://admin:123456@eureka1:7001/eureka,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
+    service-url:      defaultZone: http://admin:123456@eureka1:7001/eureka #,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
   server:    #eviction-interval-timer-in-ms: 1000
     enable-self-preservation: false
     
