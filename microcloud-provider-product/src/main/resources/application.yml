@@ -29,3 +29,7 @@ info:
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   build.parent: $project.parent.artifactId$
+  
+person:  
+  age: 19
+  name: ahu 
