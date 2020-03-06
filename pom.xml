@@ -19,10 +19,12 @@
 		<module>microcloud-provider-product3</module>
 		<module>microcloud-security</module>
 		<module>microcloud-consumer</module>
+		<module>microcloud-consumer-ribbon</module>
+		<module>microcloud-consumer-feign</module>
 		<module>microcloud-eureka1</module>
 		<module>microcloud-eureka2</module>
 		<module>microcloud-eureka3</module>
-		<module>microcloud-consumer-ribbon</module>
+		<module>microCloud-service</module>
 	</modules>
 
 	<dependencyManagement>
@@ -59,6 +61,11 @@
 			<dependency>
 				<groupId>zw</groupId>
 				<artifactId>microcloud-security</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>zw</groupId>
+				<artifactId>microCloud-service</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>
