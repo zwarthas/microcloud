@@ -1,0 +1,18 @@
+*/.git/*
+.deployables
+.git
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.class
+bin
+target
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

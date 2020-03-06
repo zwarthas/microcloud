@@ -12,3 +12,7 @@ eureka:  instance:
     
 spring:  security:    user:      name: admin
       password: 123456
+      
+person:
+  name: dahubi
+  age: 18
