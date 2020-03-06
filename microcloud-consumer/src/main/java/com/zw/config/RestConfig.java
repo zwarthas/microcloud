@@ -31,9 +31,9 @@ public class RestConfig {
 		return headers;
 	}
 	
-//	@Bean
-//	public IRule ribbonRule() {
-//		return new RandomRule();
-//	}
+	@Bean
+	public IRule ribbonRule() {
+		return new RandomRule();
+	}
 
 }
