@@ -43,6 +43,7 @@ public class ConsumerProductController {
 		ServiceInstance serviceInstance=loadBalancerClient.choose("MICROCLOUD-PROVIDER-PRODUCT");
 		URI uri = URI.create(String.format("http://%s:%s/product/list/" ,
                 serviceInstance.getHost(), serviceInstance.getPort()));
+		@SuppressWarnings("unchecked")
 		List<Product> list = restTemplate
 				.exchange(uri, HttpMethod.GET, new HttpEntity<>(httpHeaders), List.class)
 				.getBody();
