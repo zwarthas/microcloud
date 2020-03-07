@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.zw.EurekaApp;
@@ -14,11 +15,11 @@ import com.zw.EurekaApp;
 public class TestBean {
 
 	@Resource
-	Person person;
+	EurekaClientAutoConfiguration eurekaClientAutoConfiguration;
 	
 	@Test
 	public void testYibo() {
-		System.out.println(person.getName());
+		System.out.println(eurekaClientAutoConfiguration.toString());
 	}
 	
 }
