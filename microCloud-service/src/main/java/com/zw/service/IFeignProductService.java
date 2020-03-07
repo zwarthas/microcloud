@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.zw.feign.FeignClientConfig;
 import com.zw.vo.Product;
 
-@FeignClient(name = "MICROCLOUD-PROVIDER-PRODUCT",configuration = FeignClientConfig.class)
+@FeignClient(name = "MICROCLOUD-PROVIDER-PRODUCT",configuration = FeignClientConfig.class,
+fallbackFactory = IFeignProductServiceFallbackFactory.class)
 public interface IFeignProductService {
 
 	@RequestMapping(value="/product/get/{id}")

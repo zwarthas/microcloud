@@ -21,10 +21,14 @@
 		<module>microcloud-consumer</module>
 		<module>microcloud-consumer-ribbon</module>
 		<module>microcloud-consumer-feign</module>
+		<module>microcloud-consumer-hystrix</module>
 		<module>microcloud-eureka1</module>
 		<module>microcloud-eureka2</module>
 		<module>microcloud-eureka3</module>
 		<module>microCloud-service</module>
+		<module>microcloud-hystrix-dashbord</module>
+		<module>microcloud-provider-user-hystrix</module>
+		<module>microcloud-consumer-turbine</module>
 	</modules>
 
 	<dependencyManagement>

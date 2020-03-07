@@ -1,0 +1,12 @@
+server:
+  port: 9101
+  
+spring:
+  application:
+    name: microcloud-consumer-turbine
+    
+eureka:  client:    register-with-eureka: false
+    service-url:      defaultZone: http://admin:eureka@eureka1:7001/eureka
+      
+turbine:  app-config: MICROCLOUD-PROVIDER-USER,MICROCLOUD-PROVIDER-PRODUCT
+  cluster-name-expression: new String("default")

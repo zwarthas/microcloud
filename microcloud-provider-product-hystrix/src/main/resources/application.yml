@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: microcloud-provider-product
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类#  security:#    user:#      name: admin
+#      password: 123456
+#      roles:#      - USER
+server:
+  port: 8080
+mybatis:
+  mapper-locations:
+  - classpath:mapping/*.xml
+  
+logging:
+  level:
+    com.zw.mapper: debug
+    
+eureka:  client:
+#    fetch-registry: false
+#    register-with-eureka: false    service-url:      defaultZone: http://admin:eureka@eureka1:7001/eureka #,http://admin:123456@eureka2:7002/eureka,http://admin:123456@eureka3:7003/eureka
+  instance:    instance-id: microcloud-provider-product-instance1
+    prefer-ip-address: true
+    
+info:
+  app.name: microcloud-provider-product
+  compane.name: com
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+  build.parent: $project.parent.artifactId$
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
