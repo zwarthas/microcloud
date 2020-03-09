@@ -1,0 +1,7 @@
+server:  port: 7101
+
+spring:
+  application:
+    name: microcloud-config-application
+  security:    user:      name: admin
+      password: config  cloud:    config:      server:        git:          uri: https://github.com/zwarthas/microConfig.git          username: zwarthas          password: 1989sunshiny
