@@ -3,8 +3,6 @@ package com.zw.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.websocket.server.PathParam;
-
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpEntity;
@@ -13,7 +11,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -47,6 +44,7 @@ public class ConsumerProductController {
                 "【*** ServiceInstance ***】host = " + serviceInstance.getHost()
                         + "、port = " + serviceInstance.getPort()
                         + "、serviceId = " + serviceInstance.getServiceId());
+		@SuppressWarnings("unchecked")
 		List<Product> list = restTemplate
 				.exchange(ProductConstants.PRODUCT_LIST_URL, HttpMethod.GET, new HttpEntity<>(httpHeaders), List.class)
 				.getBody();
