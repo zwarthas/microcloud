@@ -32,6 +32,7 @@
 		<module>microcloud-consumer-turbine</module>
 		<module>microcloud-zuul</module>
 		<module>microcloud-config</module>
+		<module>microcloud-eureka-config</module>
 	</modules>
 
 	<dependencyManagement>

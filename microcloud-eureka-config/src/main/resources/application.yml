@@ -1,0 +1,11 @@
+server:
+  port: 7201
+  
+eureka:
+  instance:    hostname: eureka-config1  client:    service-url:      defaultZone: http://localhost:7201/eureka
+    register-with-eureka: false
+    fetch-registry: false
+    
+spring:  application:    name: microcloud-eureka-config-application
+  security:    user:      name: admin
+      password: eurekaconfig

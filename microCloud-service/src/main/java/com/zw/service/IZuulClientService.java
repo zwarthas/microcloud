@@ -15,7 +15,7 @@ public interface IZuulClientService {
 	@RequestMapping("/api/proxy-user/user/get/{name}")
 	public User getUser(@PathVariable("name")String userName) ;
 	
-	@RequestMapping("api/proxy-product/product/get/{id}")
+	@RequestMapping("/api/proxy-product/product/get/{id}")
 	public Product getProduct(@PathVariable("id") int id);
 	
 }
