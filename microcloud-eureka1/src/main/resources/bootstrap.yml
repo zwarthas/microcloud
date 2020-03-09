@@ -4,9 +4,14 @@ spring:
       name: microcloud-eureka1
       label: master
       username: admin
-      password: config
+      password: configbus
       discovery:        enabled: true
-        service-id: MICROCLOUD-CONFIG-APPLICATION
-        
+        service-id: MICROCLOUD-CONFIG-BUS-APPLICATION
+  rabbitmq:
+    host: localhost
+    port: 5672    # RabbitMQ的监听端口
+    username: guest  # 用户名
+    password: guest # 密码
+  
 eureka:  client:
 #    register-with-eureka: false    service-url:      defaultZone: http://admin:eurekaconfig@localhost:7201/eureka
