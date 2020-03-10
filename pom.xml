@@ -34,6 +34,8 @@
 		<module>microcloud-config</module>
 		<module>microcloud-eureka-config</module>
 		<module>microcloud-config-bus</module>
+		<module>microcloud-stream-provider</module>
+		<module>microcloud-stream-consumer</module>
 	</modules>
 
 	<dependencyManagement>

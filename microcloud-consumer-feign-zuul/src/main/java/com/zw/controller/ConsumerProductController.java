@@ -15,18 +15,16 @@ import com.zw.service.IZuulClientService;
 public class ConsumerProductController {
 
 	@Resource
-	 IZuulClientService clientService;
+	IZuulClientService clientService;
 
 	@RequestMapping("/product/user/{id}/{name}")
-	public Object getUserAndProduct(@PathVariable("id") int id,@PathVariable("name")String name) {
+	public Object getUserAndProduct(@PathVariable("id") int id, @PathVariable("name") String name) {
 		Product product = clientService.getProduct(id);
 		User user = clientService.getUser(name);
-		Map<String,Object> result = new HashMap<String, Object>();
-		result.put("user",user);
+		Map<String, Object> result = new HashMap<String, Object>();
+		result.put("user", user);
 		result.put("product", product);
 		return result;
 	}
-	
-	
 
 }
