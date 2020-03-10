@@ -1,0 +1,16 @@
+server:
+  port: 8402
+  
+spring:  application:    name: microcloud-stream-consumer
+  cloud:    stream:      binders:        defaultRabbit:
+          type: rabbit
+          environment:            spring:
+              rabbitmq:
+                address: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
+      bindings:        input:          destination: defaultExchange
+          binder: defaultRabbit
+          content-type: application/json
