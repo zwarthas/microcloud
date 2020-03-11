@@ -1,13 +1,14 @@
 server:
-  port: 8402
+  port: 8403
   
 spring:  application:    name: microcloud-stream-consumer
   cloud:    stream:
+    
       rabbit:        bindings:          custom_input:
             consumer:              binding-routing-key: '#.message'
-          custom_input2:
-            consumer:
-              binding-routing-key: '#.message'                binders:        defaultRabbit:
+#          custom_input2:
+#            consumer:
+#              binding-routing-key: '#.message'                binders:        defaultRabbit:
           type: rabbit
           environment:            spring:
               rabbitmq:
@@ -20,9 +21,9 @@ spring:  application:    name: microcloud-stream-consumer
           group: defaultQueue          destination: defaultExchange
           binder: defaultRabbit
           content-type: application/json
-        custom_input2: #对应一个通道
-          group: defaultQueue2
-          destination: defaultExchange
-          binder: defaultRabbit
-          content-type: application/json
+#        custom_input2: #对应一个通道
+#          group: defaultQueue2
+#          destination: defaultExchange
+#          binder: defaultRabbit
+#          content-type: application/json
           

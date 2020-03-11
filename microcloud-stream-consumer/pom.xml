@@ -21,6 +21,10 @@
 			<groupId>zw</groupId>
 			<artifactId>microcloud-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>zw</groupId>
+			<artifactId>microcloud-channel</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

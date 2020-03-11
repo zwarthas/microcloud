@@ -5,6 +5,8 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.zw.StreamProviderApp;
@@ -15,8 +17,9 @@ import com.zw.vo.Product;
 @RunWith(SpringRunner.class)
 public class TestProvider {
 
-	@Resource
-	IMessageProvider msgProvider;
+	@Resource(name="messageProviderImp")
+	IMessageProvider messageProvider;
+	
 
 	@Test
 	public void sendMessage() {
@@ -24,7 +27,12 @@ public class TestProvider {
 		p.setProductName("dahubi");
 		p.setProductId(6666l);
 		p.setProductDesc("dahubi666");
-		msgProvider.send(p);
+		messageProvider.send(p);
+		messageProvider.send(p);
+		messageProvider.send(p);
 	}
+	
 
+	
+	
 }

@@ -36,6 +36,8 @@
 		<module>microcloud-config-bus</module>
 		<module>microcloud-stream-provider</module>
 		<module>microcloud-stream-consumer</module>
+		<module>microcloud-stream-consumer2</module>
+		<module>microcloud-channel</module>
 	</modules>
 
 	<dependencyManagement>
@@ -77,6 +79,11 @@
 			<dependency>
 				<groupId>zw</groupId>
 				<artifactId>microCloud-service</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>zw</groupId>
+				<artifactId>microcloud-channel</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>

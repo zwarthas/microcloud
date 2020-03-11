@@ -1,8 +1,10 @@
 server:
-  port: 8401
+  port: 8404
   
 spring:
-  application:    name: microcloud-stream-provider  cloud:    stream:      binders:        defaultRabbit: 
+  application:    name: microcloud-stream-provider  cloud:    stream:      
+      rabbit:        bindings:          custom_output:
+            producer:              routing-key-expression:  '''info.message'''      binders:        defaultRabbit: 
           type: rabbit
           environment:            spring:
               rabbitmq:
@@ -11,7 +13,7 @@ spring:
                 username: guest
                 password: guest
                 vitrual-host: /
-      bindings:        output:
+      bindings:        custom_output:
           destination: defaultExchange
           binder: defaultRabbit
           content-type: application/json

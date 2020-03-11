@@ -13,12 +13,13 @@ import com.zw.vo.Product;
 public class MessageListener {
 
 	@StreamListener(DefaultProcess.INPUT)
-	public void listen2(Message<Product> message) {
-		System.out.println("爷1号听到通道1消息："+message.getPayload());
+	public void listen(Message<Product> message) {
+		System.out.println("爷1号听到1消息："+message.getPayload());
 	}
 	
 	@StreamListener(DefaultProcess.INPUT2)
-	public void listen3(Message<Product> message) {
-		System.out.println("爷2号听到通道1消息："+message.getPayload());
+	public void listen2(Message<Product> message) {
+		System.out.println("爷2号听到1消息："+message.getPayload());
 	}
+	
 }
