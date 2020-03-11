@@ -3,4 +3,24 @@ server:
   
 spring:  application:    name: microcloud-zipkin-server
     
-management:  metrics:    web:      server:        auto-time-requests: false      
+management:  metrics:    web:      server:        auto-time-requests: false      
+
+zipkin:
+  collector:
+    sample-rate: 1.0
+    http:
+      enabled: false
+    rabbitmq:
+      address: localhost:5672
+      username: guest
+      password: guest
+      virtual-host: /
+      queue: zipkin
+  storage:
+    type: mysql
+    mysql:
+      host: localhost
+      port: 3306
+      username: root
+      password: 123456
+      db: zipkin

@@ -9,7 +9,7 @@ eureka:  client:    service-url:      defaultZone: http://admin:eureka@localh
 spring:  application:    name: microcloud-zuul-application
   security:    user:      name: admin
       password: zuul
-    
+
 zuul:  routes:
     USER:
       path: /proxy-user/**
@@ -19,6 +19,7 @@ zuul:  routes:
       service-id: microcloud-provider-product  prefix: /api
   ignored-services:  - "*"
   
+
   
   
   

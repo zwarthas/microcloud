@@ -39,6 +39,5 @@
 			<groupId>zw</groupId>
 			<artifactId>microCloud-service</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>

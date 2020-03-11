@@ -4,7 +4,7 @@ server:
 spring:
   application:
     name: microcloud-provider-user
-    
+
 eureka:  client:    service-url:      defaultZone: http://admin:eureka@eureka1:7001/eureka
   instance:    instance-id: microcloud-provider-user
     prefer-ip-address: true
