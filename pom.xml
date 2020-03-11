@@ -38,6 +38,7 @@
 		<module>microcloud-stream-consumer</module>
 		<module>microcloud-stream-consumer2</module>
 		<module>microcloud-channel</module>
+		<module>microcloud-sleuth</module>
 	</modules>
 
 	<dependencyManagement>
